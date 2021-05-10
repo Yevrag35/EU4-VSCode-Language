@@ -24,10 +24,10 @@
 			"include": "#scopes"
 		},
 		{
-			"include": "#commands"
+			"include": "#tags"
 		},
 		{
-			"include": "#tags"
+			"include": "#commands"
 		},
 		{
 			"include": "#dates"
@@ -58,10 +58,7 @@
 			]
 		},
 		"reserved-words": {
-			"patterns": [{
-				"name": "constant.character.euiv",
-				"match": "(?i:\\b(YES|NO|ROOT|FROM)\\b)"
-			}]
+			
 		},
 		"operators": {
 			"patterns": [{
@@ -72,13 +69,13 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.less.euiv",
-				"match": "(?i:\\b(if|limit|elseif|else|while|NOT|AND|OR)\\b)"
+				"match": "(?i:\\b(if|limit|elseif|else|while|NOT|AND|OR|yes|no)\\b)"
 			}]
 		},
 		"high-level-scopes": {
 			"patterns": [{
 				"name": "entity.name.class.highlevel.euiv",
-				"match": "\\b(?i:country_decisions|potential|provinces_to_highlight|allow|effect|ai_will_do)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
+				"match": "\\b(?i:abilities|absolutism|after|ai_priority|ai_weight|ai_will_do|allow|attacker_disabled_po|build_trigger|can_start|chance|country_decisions|country_event|dynasty_names|effect|female_names|global_modifiers|immediate|major_trigger|male_names|mean_time_to_happen|modifier|objectives|on_built|on_destroyed|on_obsolete|option|picture|prerequisites|potential|potential_on_load|province_event|province_modifiers|provinces_to_highlight|required_missions|rule|skill_scaled_modifier|state_modifiers|trigger)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
 			}]
 		},
 		"scopes": {
@@ -87,16 +84,16 @@
 				"match": "\\b(\\w+)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
 			}]
 		},
+		"tags": {
+			"patterns": [{
+				"name":"constant.character.euiv",
+				"match": "\\b([A-Z]{3}|FROM|ROOT)\\b"
+			}]
+		},
 		"commands": {
 			"patterns": [{
 				"name": "entity.name.function.euiv",
 				"match": "\\b(\\w+)\\b(?=[ ]*\\=)(?![ ]*(?:\\{|$))"
-			}]
-		},
-		"tags": {
-			"patterns": [{
-				"name":"support.class.tags.euiv",
-				"match": "\\b([A-Z]{3})\\b"
 			}]
 		},
 		"dates": {
