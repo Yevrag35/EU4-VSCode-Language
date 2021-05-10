@@ -11,7 +11,7 @@
     ],
     "contributes": {
         "languages": [{
-            "id": "eu4",
+            "id": "euiv",
             "aliases": ["EUIV Code", "euiv", "eu4", "EU4 Code"],
             "extensions": [".txt"],
             "configuration": "./language-configuration.json"
