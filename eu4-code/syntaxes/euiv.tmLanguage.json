@@ -87,7 +87,7 @@
 		"tags": {
 			"patterns": [{
 				"name":"constant.character.euiv",
-				"match": "\\b([A-Z]{3}|FROM|ROOT)\\b"
+				"match": "(?i:\\b([A-Z]{3}|FROM|ROOT)\\b)"
 			}]
 		},
 		"commands": {
