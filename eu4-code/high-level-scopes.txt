@@ -8,6 +8,8 @@ allow
 area_modifier
 army_names
 attacker_disabled_po
+base
+bonus
 build_trigger
 can_end
 can_start
@@ -31,12 +33,15 @@ keep_trigger
 leader_names
 major_trigger
 male_names
+max
 mean_time_to_happen
 mechanics
 modifier
 monarch_names
 objectives
+on_activation
 on_built
+on_deactivation
 on_destroyed
 on_monthly
 on_obsolete
@@ -54,8 +59,10 @@ reform_levels
 removed_effect
 required_missions
 rule
+scale
 ship_names
 skill_scaled_modifier
+start
 state_modifiers
 tier_0
 tier_1
