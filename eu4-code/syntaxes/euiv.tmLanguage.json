@@ -18,6 +18,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#high-level-scopes"
+		},
+		{
 			"include": "#commands"
 		},
 		{
@@ -27,10 +30,10 @@
 			"include": "#dates"
 		},
 		{
-			"include": "#numbers"
+			"include": "#scopes"
 		},
 		{
-			"include": "#scopes"
+			"include": "#numbers"
 		}
 	],
 	"repository": {
@@ -46,7 +49,7 @@
 		"reserved-words": {
 			"patterns": [{
 				"name": "constant.character.euiv",
-				"match": "(?<=^|\\s)(yes|no)(?=$|\\s)"
+				"match": "(?i:\\b(YES|NO|ROOT|FROM)\\b)"
 			}]
 		},
 		"operators": {
@@ -57,20 +60,26 @@
 		},
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.control.euiv",
+				"name": "keyword.control.less.euiv",
 				"match": "(?i:\\b(if|while|NOT|AND|OR)\\b)"
+			}]
+		},
+		"high-level-scopes": {
+			"patterns": [{
+				"name": "entity.name.class.highlevel.euiv",
+				"match": "\\b(?i:potential|provinces_to_highlight|allow|effect|ai_will_do)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
 			}]
 		},
 		"commands": {
 			"patterns": [{
 				"name": "entity.name.function.euiv",
-				"match": "(\\w+)\\s\\=\\s(?!\\{)"
+				"match": "(?:^\\s*|\\{\\s*)\\b(\\w+)\\b(?![ ]*\\=[ ]*(?:\\{|$))"
 			}]
 		},
 		"tags": {
 			"patterns": [{
 				"name":"support.class.tags.euiv",
-				"match": "(?<!\\w)[A-Z]{3}(?!\\w)"
+				"match": "\\b([A-Z]{3})\\b"
 			}]
 		},
 		"strings": {
@@ -93,7 +102,7 @@
 		"scopes": {
 			"patterns": [{
 				"name": "variable.name.scope.euiv",
-				"match": "(\\w+)\\s\\=\\s(?=\\{)"
+				"match": "\\b(\\w+)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
 			}]
 		},
 		"numbers": {
