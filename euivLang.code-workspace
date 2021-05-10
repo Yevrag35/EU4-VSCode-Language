@@ -13,7 +13,7 @@
 			{
 				"label": "Build",
 				"type": "shell",
-				"command": "Copy-Item -Path \"${workspaceFolder:EUIV-Code-Format}\\eu4-code\" $env:USERPROFILE\\.vscode\\extensions -Recurse -Force",
+				"command": "& \"${workspaceFolder:EUIV-Code-Format}\\.build\\build.ps1\"",
 				"problemMatcher": [],
 				"promptOnClose": true,
 				"presentation": {

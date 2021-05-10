@@ -32,12 +32,13 @@ on_destroyed
 on_obsolete
 option
 picture
-prerequisites
 potential
 potential_on_load
+prerequisites
 province_event
 province_modifiers
 provinces_to_highlight
+reform_levels
 required_missions
 rule
 ship_names
