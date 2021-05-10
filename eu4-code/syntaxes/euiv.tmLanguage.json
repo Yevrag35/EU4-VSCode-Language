@@ -37,6 +37,17 @@
 		}
 	],
 	"repository": {
+		"strings": {
+			"name": "string.quoted.double.euiv",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.euiv",
+					"match": "\\\\"
+				}
+			]
+		},
 		"comments": {
 			"patterns": [
 				{
@@ -81,17 +92,6 @@
 				"name":"support.class.tags.euiv",
 				"match": "\\b([A-Z]{3})\\b"
 			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.euiv",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.euiv",
-					"match": "\\\\"
-				}
-			]
 		},
 		"dates": {
 			"patterns": [{
