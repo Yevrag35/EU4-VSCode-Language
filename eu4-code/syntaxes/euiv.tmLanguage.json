@@ -9,16 +9,28 @@
 			"include": "#comments"
 		},
 		{
+			"include": "#reserved-words"
+		},
+		{
 			"include": "#operators"
 		},
 		{
 			"include": "#keywords"
 		},
 		{
+			"include": "#commands"
+		},
+		{
+			"include": "#tags"
+		},
+		{
+			"include": "#dates"
+		},
+		{
 			"include": "#numbers"
 		},
 		{
-			"include": "#reserved-words"
+			"include": "#scopes"
 		}
 	],
 	"repository": {
@@ -31,10 +43,34 @@
 				}
 			]
 		},
+		"reserved-words": {
+			"patterns": [{
+				"name": "constant.character.euiv",
+				"match": "(?<=^|\\s)(yes|no)(?=$|\\s)"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operator.euiv",
+				"match": "\\="
+			}]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.euiv",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "(?i:\\b(if|while|NOT|AND|OR)\\b)"
+			}]
+		},
+		"commands": {
+			"patterns": [{
+				"name": "entity.name.function.euiv",
+				"match": "(\\w+)\\s\\=\\s(?!\\{)"
+			}]
+		},
+		"tags": {
+			"patterns": [{
+				"name":"support.class.tags.euiv",
+				"match": "(?<!\\w)[A-Z]{3}(?!\\w)"
 			}]
 		},
 		"strings": {
@@ -44,9 +80,27 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.euiv",
-					"match": "\\\\."
+					"match": "\\\\"
 				}
 			]
+		},
+		"dates": {
+			"patterns": [{
+				"name": "entity.name.class.date.euiv",
+				"match": "^[0-9]{4}\\.1?[0-9]\\.[1-3]?[0-9](?!\\d)"
+			}]
+		},
+		"scopes": {
+			"patterns": [{
+				"name": "variable.name.scope.euiv",
+				"match": "(\\w+)\\s\\=\\s(?=\\{)"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric.euiv",
+				"match": "(?<=^|\\s)\\d+(\\.\\d+)?(?=$|\\s)"
+			}]
 		}
 	},
 	"scopeName": "source.euiv"

@@ -7,7 +7,8 @@
         "vscode": "^1.56.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Themes"
     ],
     "contributes": {
         "languages": [{
@@ -20,6 +21,14 @@
             "language": "euiv",
             "scopeName": "source.euiv",
             "path": "./syntaxes/euiv.tmLanguage.json"
-        }]
+        }],
+        "themes": [
+            {
+                "label": "EU4 Dark+",
+                "id": "euiv-dark-plus",
+                "uiTheme": "vs-dark",
+                "path": "./themes/euiv_dark.json"
+            }
+        ]
     }
 }
