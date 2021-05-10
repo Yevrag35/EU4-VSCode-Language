@@ -21,6 +21,9 @@
 			"include": "#high-level-scopes"
 		},
 		{
+			"include": "#scopes"
+		},
+		{
 			"include": "#commands"
 		},
 		{
@@ -28,9 +31,6 @@
 		},
 		{
 			"include": "#dates"
-		},
-		{
-			"include": "#scopes"
 		},
 		{
 			"include": "#numbers"
@@ -72,19 +72,25 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.less.euiv",
-				"match": "(?i:\\b(if|while|NOT|AND|OR)\\b)"
+				"match": "(?i:\\b(if|limit|elseif|else|while|NOT|AND|OR)\\b)"
 			}]
 		},
 		"high-level-scopes": {
 			"patterns": [{
 				"name": "entity.name.class.highlevel.euiv",
-				"match": "\\b(?i:potential|provinces_to_highlight|allow|effect|ai_will_do)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
+				"match": "\\b(?i:country_decisions|potential|provinces_to_highlight|allow|effect|ai_will_do)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
+			}]
+		},
+		"scopes": {
+			"patterns": [{
+				"name": "variable.name.scope.euiv",
+				"match": "\\b(\\w+)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
 			}]
 		},
 		"commands": {
 			"patterns": [{
 				"name": "entity.name.function.euiv",
-				"match": "(?:^\\s*|\\{\\s*)\\b(\\w+)\\b(?![ ]*\\=[ ]*(?:\\{|$))"
+				"match": "\\b(\\w+)\\b(?=[ ]*\\=)(?![ ]*(?:\\{|$))"
 			}]
 		},
 		"tags": {
@@ -99,16 +105,10 @@
 				"match": "^[0-9]{4}\\.1?[0-9]\\.[1-3]?[0-9](?!\\d)"
 			}]
 		},
-		"scopes": {
-			"patterns": [{
-				"name": "variable.name.scope.euiv",
-				"match": "\\b(\\w+)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
-			}]
-		},
 		"numbers": {
 			"patterns": [{
 				"name": "constant.numeric.euiv",
-				"match": "(?<=^|\\s)\\d+(\\.\\d+)?(?=$|\\s)"
+				"match": "(?<=^|\\s)[-]?\\d+(\\.\\d+)?(?=$|\\s)"
 			}]
 		}
 	},
