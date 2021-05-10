@@ -1,0 +1,25 @@
+{
+    "name": "euiv-code-syntax",
+    "displayName": "EU4 Code Syntax",
+    "description": "EU4 Coding Formatting and Syntax Highlighting",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "eu4",
+            "aliases": ["EUIV Code", "euiv", "eu4", "EU4 Code"],
+            "extensions": [".txt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "euiv",
+            "scopeName": "source.euiv",
+            "path": "./syntaxes/euiv.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,49 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "EUIV-Code-Format"
+		}
+	],
+	"settings": {
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Build",
+				"type": "shell",
+				"command": "Copy-Item -Path \"${workspaceFolder:EUIV-Code-Format}\\euiv-code-format\" $env:USERPROFILE\\.vscode\\extensions -Recurse -Force",
+				"problemMatcher": [],
+				"promptOnClose": true,
+				"presentation": {
+					"echo": true,
+					"reveal": "silent",
+					"focus": false,
+					"panel": "shared",
+					"showReuseMessage": false,
+					"clear": false
+				},
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				}
+			},
+			{
+				"label": "Clean Extensions",
+				"type": "shell",
+				"command": "Remove-Item -Path $env:USERPROFILE\\.vscode\\extensions\\euiv-code-format -Recurse -Force",
+				"promptOnClose": true,
+				"presentation": {
+					"echo": true,
+					"reveal": "silent",
+					"focus": false,
+					"panel": "shared",
+					"showReuseMessage": false,
+					"clear": false
+				},
+				"problemMatcher": []
+			}
+		]
+	}
+}
