@@ -75,7 +75,7 @@
 		"high-level-scopes": {
 			"patterns": [{
 				"name": "entity.name.class.highlevel.euiv",
-				"match": "\\b(?i:abilities|absolutism|after|ai_priority|ai_weight|ai_will_do|allow|army_names|attacker_disabled_po|build_trigger|can_start|chance|country_decisions|country_event|dynasty_names|effect|female_names|fleet_names|global_modifiers|historical_idea_groups|historical_units|immediate|leader_names|major_trigger|male_names|mean_time_to_happen|modifier|monarch_names|objectives|on_built|on_destroyed|on_obsolete|option|picture|potential|potential_on_load|prerequisites|province_event|province_modifiers|provinces_to_highlight|reform_levels|required_missions|rule|ship_names|skill_scaled_modifier|state_modifiers|trigger)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
+				"match": "\\b(?i:abilities|absolutism|after|ai_priority|ai_weight|ai_will_do|allow|area_modifier|army_names|attacker_disabled_po|build_trigger|can_end|can_start|can_stop|can_upgrade_trigger|can_use_modifiers_trigger|chance|cost_to_upgrade|country_decisions|country_event|country_modifiers|dynasty_names|effect|female_names|fleet_names|global_modifiers|historical_idea_groups|historical_units|immediate|keep_trigger|leader_names|major_trigger|male_names|mean_time_to_happen|mechanics|modifier|monarch_names|objectives|on_built|on_destroyed|on_monthly|on_obsolete|on_upgraded|option|picture|potential|potential_on_load|prerequisites|progress|province_event|province_modifiers|provinces_to_highlight|reform_levels|removed_effect|required_missions|rule|ship_names|skill_scaled_modifier|state_modifiers|tier_0|tier_1|tier_2|tier_3|time|trigger|upgrade_time)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
 			}]
 		},
 		"scopes": {
