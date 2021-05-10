@@ -13,7 +13,7 @@
 			{
 				"label": "Build",
 				"type": "shell",
-				"command": "Copy-Item -Path \"${workspaceFolder:EUIV-Code-Format}\\euiv-code-format\" $env:USERPROFILE\\.vscode\\extensions -Recurse -Force",
+				"command": "Copy-Item -Path \"${workspaceFolder:EUIV-Code-Format}\\eu4-code\" $env:USERPROFILE\\.vscode\\extensions -Recurse -Force",
 				"problemMatcher": [],
 				"promptOnClose": true,
 				"presentation": {
@@ -32,7 +32,7 @@
 			{
 				"label": "Clean Extensions",
 				"type": "shell",
-				"command": "Remove-Item -Path $env:USERPROFILE\\.vscode\\extensions\\euiv-code-format -Recurse -Force",
+				"command": "Remove-Item -Path $env:USERPROFILE\\.vscode\\extensions\\eu4-code -Recurse -Force",
 				"promptOnClose": true,
 				"presentation": {
 					"echo": true,
