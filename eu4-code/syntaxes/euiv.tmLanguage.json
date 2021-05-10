@@ -75,7 +75,7 @@
 		"high-level-scopes": {
 			"patterns": [{
 				"name": "entity.name.class.highlevel.euiv",
-				"match": "\\b(?i:abilities|absolutism|after|ai_priority|ai_weight|ai_will_do|allow|attacker_disabled_po|build_trigger|can_start|chance|country_decisions|country_event|dynasty_names|effect|female_names|global_modifiers|immediate|major_trigger|male_names|mean_time_to_happen|modifier|objectives|on_built|on_destroyed|on_obsolete|option|picture|prerequisites|potential|potential_on_load|province_event|province_modifiers|provinces_to_highlight|required_missions|rule|skill_scaled_modifier|state_modifiers|trigger)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
+				"match": "\\b(?i:BOOM_REPLACE_ME_BOOM)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
 			}]
 		},
 		"scopes": {
