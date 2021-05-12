@@ -69,7 +69,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.less.euiv",
-				"match": "(?i:\\b(if|limit|else_if|else|while|NOT|AND|OR|yes|no)\\b)"
+				"match": "(?i:\\b(if|limit|else_if|else|while|NOT|AND|OR)\\b)"
 			}]
 		},
 		"high-level-scopes": {
@@ -80,19 +80,19 @@
 		},
 		"scopes": {
 			"patterns": [{
-				"name": "variable.name.scope.euiv",
+				"name": "entity.name.function.scope.euiv",
 				"match": "\\b(\\w+)\\b(?=[ ]*\\=[ ]*(?:\\{|$))"
 			}]
 		},
 		"tags": {
 			"patterns": [{
-				"name":"constant.character.euiv",
-				"match": "(?i:\\b([A-Z]{3}|FROM|ROOT)\\b)"
+				"name":"constant.character.tags-other-scopes.euiv",
+				"match": "\\b([A-Z]{3}|(?i:FROM|ROOT|yes|no))\\b"
 			}]
 		},
 		"commands": {
 			"patterns": [{
-				"name": "entity.name.function.euiv",
+				"name": "variable.name.modifier-command.euiv",
 				"match": "\\b(\\w+)\\b(?=[ ]*\\=)(?![ ]*(?:\\{|$))"
 			}]
 		},
