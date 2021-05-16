@@ -262,4 +262,8 @@ __pycache__/
 
 desktop\.ini
 
+eu4-code/LICENSE
+eu4-code/README.md
+
+*.vsix
 *.no

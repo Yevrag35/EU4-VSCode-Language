@@ -4,14 +4,14 @@
         "name": "Mike Garvey",
         "email": "github@thepsyev.com"
     },
-    "publisher": "The PS Yev",
+    "publisher": "thepsyev-yevrag35",
     "licenses": [
         {
-            "type": ""
+            "url": "https://raw.githubusercontent.com/Yevrag35/EU4-VSCode-Language/master/LICENSE"
         }
     ],
     "displayName": "EU4 Code Syntax",
-    "description": "EU4 Coding Formatting and Syntax Highlighting",
+    "description": "EU4 Code Syntax Highlighting",
     "version": "0.1.0",
     "repository": {
         "type": "git",

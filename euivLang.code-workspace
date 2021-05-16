@@ -13,7 +13,7 @@
 			{
 				"label": "Build",
 				"type": "shell",
-				"command": "& \"${workspaceFolder:EUIV-Code-Format}\\.build\\build.ps1\"",
+				"command": "powershell -ex Bypass -NonInteractive -WindowStyle Hidden -File \"${workspaceFolder:EUIV-Code-Format}\\.build\\build.ps1\"",
 				"problemMatcher": [],
 				"promptOnClose": true,
 				"presentation": {
