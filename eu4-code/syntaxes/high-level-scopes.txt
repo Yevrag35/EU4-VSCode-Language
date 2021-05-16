@@ -1,3 +1,5 @@
+# DO NOT DELETE THIS FILE
+# - Add any scopes here and build to treat them as 'high-level' scopes.
 abilities
 absolutism
 after

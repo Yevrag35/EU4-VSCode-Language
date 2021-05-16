@@ -87,7 +87,7 @@
 		"tags": {
 			"patterns": [{
 				"name":"constant.character.tags-other-scopes.euiv",
-				"match": "\\b([A-Z]{3}|(?i:FROM|ROOT|yes|no))\\b"
+				"match": "\\b([A-Z]{3}|(?i:FROM|ROOT|PREV|THIS|yes|no))\\b"
 			}]
 		},
 		"commands": {
