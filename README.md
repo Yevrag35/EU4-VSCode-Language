@@ -10,7 +10,7 @@ Works with any EU4 .txt file coding system.
 
 ## Requirements
 
-PowerShell (Windows or Core) must be installed in order to utilize the automated workspace tasks.
+[PowerShell Core](https://github.com/PowerShell/PowerShell/releases/latest) (pwsh) must be installed in order to utilize the automated workspace tasks.
 
 ## Extension Settings
 
