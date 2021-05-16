@@ -1,14 +1,27 @@
 {
     "name": "euiv-code-syntax",
+    "author": {
+        "name": "Mike Garvey",
+        "email": "github@thepsyev.com"
+    },
+    "publisher": "The PS Yev",
+    "licenses": [
+        {
+            "type": ""
+        }
+    ],
     "displayName": "EU4 Code Syntax",
     "description": "EU4 Coding Formatting and Syntax Highlighting",
     "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/YevRag35/EU4-VSCode-Language"
+    },
     "engines": {
         "vscode": "^1.56.0"
     },
     "categories": [
-        "Programming Languages",
-        "Themes"
+        "Programming Languages"
     ],
     "contributes": {
         "languages": [{
@@ -21,14 +34,6 @@
             "language": "euiv",
             "scopeName": "source.euiv",
             "path": "./syntaxes/euiv.tmLanguage.json"
-        }],
-        "themes": [
-            {
-                "label": "EU4 Dark+",
-                "id": "euiv-dark-plus",
-                "uiTheme": "vs-dark",
-                "path": "./themes/euiv_dark.json"
-            }
-        ]
+        }]
     }
 }
