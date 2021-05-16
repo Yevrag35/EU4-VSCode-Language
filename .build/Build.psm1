@@ -1,4 +1,48 @@
-﻿Function Read-AndSortItems() {
+﻿Function Append-Line() {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory=$true, Position=0)]
+        [System.Text.StringBuilder]
+        $Builder,
+
+        [Parameter(Mandatory=$false)]
+        [switch]
+        $IncludeEmptyLines,
+
+        [Parameter(Mandatory=$false)]
+        [switch]
+        $NoLineBreakAtEnd,
+
+        [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
+        [string[]]
+        $InputObject
+    )
+    Process {
+
+        if (-not $IncludeEmptyLines) {
+            $lines = $InputObject.Where({-not [string]::IsNullOrWhitespace($_)})
+        }
+        else {
+            $lines = $InputObject
+        }
+
+        if ($NoLineBreakAtEnd) {
+            for ($i = 0; $i -lt $lines.Count - 1; $i++) {
+
+                [void] $Builder.AppendLine($lines[$i])
+            }
+            [void] $Builder.AppendLine($lines[$lines.Count - 1])
+        }
+        else {
+            foreach ($line in $lines) {
+
+                [void] $Builder.AppendLine($line)
+            }
+        }
+    }
+}
+
+Function Read-AndSortItems() {
     [CmdletBinding()]
     [OutputType([string])]
     param (
@@ -12,15 +56,28 @@
         $Path,
 
         [Parameter(Mandatory=$false)]
+        [ValidateNotNull()]
+        [System.Text.Encoding]
+        $Encoding = [System.Text.Encoding]::UTF8,
+
+        [Parameter(Mandatory=$false)]
         [switch]
         $ReadOnly
     )
     Process {
-        [string[]] $fileContent = [System.IO.File]::ReadLines($Path) | Sort-Object -Unique
+        $builder = New-Object System.Text.StringBuilder
+        $lines,$comments = [System.IO.File]::ReadAllLines($Path, $Encoding).Where({$_ -notlike "#*"}, "Split")
+
+        [string[]] $fileContent = $lines | Where-Object { -not [string]::IsNullOrWhiteSpace($_) } | Sort-Object -Unique
+        $comments | Append-Line $builder
+        $fileContent | Append-Line $builder -NoLineBreakAtEnd
 
         if (-not $ReadOnly) {
-
-            Set-Content -Path $Path -Value $fileContent -Force   
+            
+            Set-Content -Path $Path -Value $builder.ToString() -Force
+        }
+        else {
+            Write-Host $builder.ToString() -f Yellow
         }
         $fileContent
     }
@@ -86,10 +143,11 @@ Function Replace-Content() {
         $JoinedScopes,
 
         [Parameter(Mandatory=$true, Position=1)]
-        [ValidateScript({
-            # The incoming list/collection must NOT be empty
-            $_.Count -gt 0
-        })]
+        [AllowEmptyString()]
+        # [ValidateScript({
+        #     # The incoming list/collection must NOT be empty
+        #     $_.Count -gt 0
+        # })]
         [System.Collections.Generic.List[string]]
         $Lines
     )
