@@ -1,5 +1,9 @@
 # EU4 Code Syntax Highlighting
 
+![version](https://img.shields.io/visual-studio-marketplace/v/thepsyev-yevrag35.euiv-code-syntax)
+![installs](https://img.shields.io/visual-studio-marketplace/i/thepsyev-yevrag35.euiv-code-syntax)
+![downloads](https://img.shields.io/visual-studio-marketplace/d/thepsyev-yevrag35.euiv-code-syntax)
+
 ## Features
 
 Rich syntax highlighting and code folding that is based on Regex and known, hardcoded (as of 1.31.3) high-level scopes.
@@ -10,7 +14,7 @@ Works with any EU4 .txt file coding system.  __Colors are determined by the VSCo
 
 ## How To Use
 
-* Install the extension
+* Install the extension through VSCode directly or [download the VSIX from the Marketplace](https://marketplace.visualstudio.com/items?itemName=thepsyev-yevrag35.euiv-code-syntax).
 
 * Open an EU4 .txt code file, go to lower, right corner of the VSCode window, and select the "Language".  By default, VSCode opens .txt files as "Plain Text":
 
