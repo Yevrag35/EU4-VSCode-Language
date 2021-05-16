@@ -1,20 +1,17 @@
 ﻿[CmdletBinding()]
 param ()
 
-#$allModules = Get-ChildItem -Path "$PSScriptRoot" -Filter *.psm1 -ErrorAction Stop
-$allModules = Get-ChildItem -Path "E:\Local_Repos\EUIV_Format_Syntax\.build" -Filter *.psm1 -ErrorAction Stop
+$allModules = Get-ChildItem -Path "$PSScriptRoot" -Filter *.psm1 -ErrorAction Stop
+#$allModules = Get-ChildItem -Path "E:\Local_Repos\EUIV_Format_Syntax\.build" -Filter *.psm1 -ErrorAction Stop
 foreach ($module in $allModules) {
 	Import-Module $module.FullName -ErrorAction Stop
 }
 
-#$eu4Code = "$PSScriptRoot\..\eu4-code"
-$eu4Code = "E:\Local_Repos\EUIV_Format_Syntax\eu4-code"
-#$scopesPath = Resolve-Path -Path "$eu4Code\high-level-scopes.txt" | % Path
+$eu4Code = "$PSScriptRoot\..\eu4-code"
+#$eu4Code = "E:\Local_Repos\EUIV_Format_Syntax\eu4-code"
 $syntaxPath = Resolve-Path -Path "$eu4Code\syntaxes" | % Path
 
-#[string[]] $highLevelScopes = Get-Content -Path $scopesPath | Sort-Object -Unique
 [string[]] $highLevelScopes = Resolve-Path -Path "$eu4Code\syntaxes\high-level-scopes.txt" | Read-AndSortItems
-#Set-Content -Path $scopesPath -Value $highLevelScopes -Force
 
 $joinAll = $highLevelScopes -join '|'
 
