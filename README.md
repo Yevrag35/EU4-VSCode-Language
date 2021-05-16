@@ -4,9 +4,21 @@
 
 Rich syntax highlighting and code folding that is based on Regex and known, hardcoded (as of 1.31.3) high-level scopes.
 
-Works with any EU4 .txt file coding system.
+Works with any EU4 .txt file coding system.  __Colors are determined by the VSCode theme that is in use.__
 
-![Highlighting_Example_1](./.media/Highlighting_Example.png)
+![Dark+ Theme](./.media/Highlighting_Example.png)
+
+## How To Use
+
+* Install the extension
+
+* Open an EU4 .txt code file, go to lower, right corner of the VSCode window, and select the "Language".  By default, VSCode opens .txt files as "Plain Text":
+
+![Select_Language_1](./.media/Select_Language_1.png)
+
+* Then, in the language selecting dropdown, select __"EUIV Code"__
+
+![Select_Language_2](./.media/Select_Language_2.png)
 
 ## Requirements
 
